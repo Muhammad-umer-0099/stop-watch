@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    background: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.fix {
+    display: inline-block;
+    min-width: 360px;
+    min-height: 400px;
+    padding: 50px 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 25px #0000004a;
+    text-align: center;
+}
+#timer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    border-radius: 50%;
+    font-size: 32px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+p {
+    font-weight: 400;
+    color: grey;
+    padding: 30px 0;
+}
+.optain a{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color: burlywood;
+}
+#play,#reset,#stop {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 1px soid black;
+    box-shadow: 0 8px 25px #bf5fc845, 0 8px 25px burlywood;
+    transition: all ease 0.1s;
+    font-weight: 400;
+}
+#play:active, #stop:active, #reset:active {
+    transform: scale(0.95);
+}
+#stop .fa {
+    margin-right: 5px;
+}
+/*CIRCLE ANIMATION*/
+#timer svg {
+    position: absolute;
+    left: 0;
+}
+#animateCircle.addAnimation{
+    stroke-dasharray: 770;
+    stroke-dashoffset: -770;
+    animation: animateCircle 60s linear infinite;
+    animation-play-state: paused; /*default animation is pause*/
+}
+@keyframes animateCircle{
+    from{
+        stroke-dashoffset: 0;
+    }
+}
+.defaultCircle {
+    opacity: .3;
+}
